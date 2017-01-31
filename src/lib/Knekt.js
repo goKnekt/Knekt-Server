@@ -4,7 +4,8 @@
  import Hapi from 'hapi';
 
  //core routes
- import Descriptor from './routes/descriptor';
+ import Descriptor from './routes/Descriptor';
+ import Authenticator from './routes/Auth';
 
  export class Knekt {
  	constructor() {
@@ -14,6 +15,10 @@
 
  	setConnection(host, port) {
  		this._server.connection({host: host, port: port});
+ 	}
+
+ 	bindServer(item) {
+ 		this._server.bind(item);
  	}
 
  	listen() {
@@ -37,6 +42,7 @@
  	}
 
  	_registerCoreRoutes() {
- 		this._server.route(Descriptor(this));
+ 		this._server.route(Descriptor(this).map((route) => {return route}));
+ 		this._server.route(Authenticator(this));
  	}
  }
