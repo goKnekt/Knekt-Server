@@ -28,6 +28,8 @@
     "should": "^11.2.0"
   },
   "dependencies": {
-    "hapi": "^16.1.0"
+    "bonjour": "^3.5.0",
+    "hapi": "^16.1.0",
+    "jsonwebtoken": "^7.2.1"
   }
 }
