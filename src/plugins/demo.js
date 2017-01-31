@@ -24,7 +24,17 @@ export class Plugin {
 					}
 				]
 			}
+		],
+		settings: [
+			{
+				'APIKey': {
+					'required': true,
+					'placeholder': 'Enter your API Key',
+					'regex': '/^[A-z]+$/'
+				}
+			}
 		]
+		
 	};
 
 	//Namespace your routes!
