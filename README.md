@@ -1,5 +1,6 @@
 # Knekt-Server
-Server component of the Knekt ecosystem built upon Hapi.js
+![Build status]
+(https://api.travis-ci.org/goKnekt/Knekt-Server.svg)
 
 ## Overview
 The server component of Knekt is the central hub for all it's client applications, it's here they get configuration options
